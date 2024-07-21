@@ -1,6 +1,6 @@
-'use strict'
+import { WebAudioFontPlayer } from "./player"
 
-class WebAudioFontLoader {
+export class WebAudioFontLoader {
 	cached: CachedPreset[] = [];
 	player: WebAudioFontPlayer;
 	instrumentKeyArray: string[] = [];

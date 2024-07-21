@@ -1,6 +1,4 @@
-'use strict'
-
-class WebAudioFontChannel {
+export class WebAudioFontChannel {
 	audioContext: AudioContext;
 	input: GainNode;
 	band32: BiquadFilterNode;

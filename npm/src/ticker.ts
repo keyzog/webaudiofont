@@ -1,6 +1,6 @@
-'use strict'
+import { WebAudioFontPlayer } from "./player";
 
-class WebAudioFontTicker {
+export class WebAudioFontTicker {
 	stateStop = 1;
 	statePlay = 2;
 	stateEnd = 3;

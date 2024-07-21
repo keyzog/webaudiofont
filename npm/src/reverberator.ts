@@ -1,6 +1,4 @@
-'use strict'
-
-class WebAudioFontReverberator {
+export class WebAudioFontReverberator {
 	audioContext: AudioContext;
 	output: GainNode;
 	input: BiquadFilterNode;

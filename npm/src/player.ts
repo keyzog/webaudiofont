@@ -1,10 +1,13 @@
-'use strict'
+import { WebAudioFontLoader } from "./loader";
+import { WebAudioFontChannel } from "./channel";
+import { WebAudioFontReverberator } from "./reverberator";
+
 console.log('WebAudioFont Engine v3.0.04 GPL3');
 //docs 
 //npm link typescript
 //npx typedoc player.ts otypes.ts channel.ts loader.ts reverberator.ts ticker.ts
 
-class WebAudioFontPlayer {
+export class WebAudioFontPlayer {
 	envelopes: WaveEnvelope[] = [];
 	loader = new WebAudioFontLoader(this);
 	//onCacheFinish = null;
