@@ -1,5 +1,5 @@
 {
-	"name": "@mrthanlon/webaudiofont",
+	"name": "@keyzog/webaudiofont",
 	"version": "4.0.0",
 	"description": "Soundfonts for web. About of 2000 musical instruments. GM MIDI compatible.",
 	"keywords": [
@@ -20,10 +20,7 @@
 		"microtonal",
 		"kontakt"
 	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/MrThanlon/webaudiofont"
-	},
+	"repository": "https://github.com/keyzog/webaudiofont",
 	"license": "GPL-3.0-or-later",
 	"type": "module",
 	"main": "dist/index.js",
