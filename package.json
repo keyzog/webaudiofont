@@ -28,10 +28,13 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"devDependencies": {},
+	"devDependencies": {
+		"tsc-alias": "^1.8.10",
+		"typescript": "^4.6.4"
+	},
 	"scripts": {
 		"test": "echo test",
-		"ts": "tsc --build npm/src/tsconfig.json",
+		"ts": "tsc --build npm/src/tsconfig.json && tsc-alias -p npm/src/tsconfig.json",
 		"prepublish": "npm run ts"
 	},
 	"dependencies": {
