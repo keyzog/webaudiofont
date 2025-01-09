@@ -1,4 +1,9 @@
-/node_modules/*
-.DS_store
-/dist
-/npm/docs
+.gitignore
+
+.github/
+examples/
+img/
+node_modules/
+npm/
+_config.yml
+tsconfig.json
