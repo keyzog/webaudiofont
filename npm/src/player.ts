@@ -14,6 +14,13 @@ export class WebAudioFontPlayer {
 	//onCacheProgress = null;
 	afterTime = 0.05;
 	nearZero = 0.000001;
+	queueGap = 0.01;
+
+	changeQueueGap(newGap: number) {
+		this.queueGap = newGap;
+		return newGap;
+	}
+
 	createChannel(audioContext: AudioContext) {
 		return new WebAudioFontChannel(audioContext);
 	};
@@ -64,7 +71,8 @@ export class WebAudioFontPlayer {
 			if (slides) {
 				singleSlide = slides[i];
 			}
-			var envlp: WaveEnvelope | null = this.queueWaveTable(audioContext, target, preset, when + i * 0.01, pitches[i], duration, volume - Math.random() * 0.01, singleSlide);
+			const gap = when + i * this.queueGap;
+			var envlp: WaveEnvelope | null = this.queueWaveTable(audioContext, target, preset, gap, pitches[i], duration, volume - Math.random() * 0.01, singleSlide);
 			if (envlp) envelopes.push(envlp);
 			volume = 0.9 * volume;
 		}
